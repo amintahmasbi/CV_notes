@@ -22,6 +22,13 @@ __smoothing__: removing high_frequency components from the image (low-pass filte
 
 ![gaussian_filter](assets/gaussian_filter.png)
 
+```python
+import cv2
+# Define a kernel size for Gaussian smoothing / blurring
+kernel_size = 3 #  they both must be positive and odd
+blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size))
+```
+
 **Properties of the Smoothing:** (such as Gaussian filter)
 
 - All values are positive

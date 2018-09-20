@@ -7,6 +7,17 @@ from skimage import io
 lena = data.lena()
 io.imshow(lena)
 
+# or 
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+# Read in the image and print out some stats
+image = mpimg.imread('lena.jpg')
+plt.imshow(image)
+
+# Grab the x and y size and make a copy of the image
+ysize = image.shape[0]
+xsize = image.shape[1]
+
 # Playing with colors
 from skimage import color
 
@@ -64,4 +75,6 @@ x, y = ij[::-1]
 hcoin, wcoin = coin.shape
 rect = plt.Rectangle((x, y), wcoin, hcoin, edgecolor='r', facecolor='none')
 ```
+
+
 
